@@ -1,0 +1,13 @@
+# Eclipse metadata (leftover from when workspace = project folder)
+.metadata/
+.settings/
+.classpath
+.factorypath
+.project
+
+# Maven build output
+target/
+
+# OS files
+Thumbs.db
+.DS_Store

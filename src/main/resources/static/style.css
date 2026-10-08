@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    max-width: 900px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+form {
+    margin-bottom: 15px;
+}
+
+input, select {
+    padding: 6px;
+    margin-right: 8px;
+}
+
+button {
+    padding: 6px 14px;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 40px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+#statusMessage {
+    font-weight: bold;
+    min-height: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+#welcomeText {
+    font-weight: bold;
+    margin: 0;
+}

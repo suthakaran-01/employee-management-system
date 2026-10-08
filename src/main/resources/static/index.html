@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Employee Management System</h1>
+    <p id="statusMessage"></p>
+
+    <!-- ===================== LOGIN PAGE ===================== -->
+    <div id="loginPage">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- ===================== TOP BAR (shown after login) ===================== -->
+    <div id="topBar" class="hidden">
+        <p id="welcomeText"></p>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- ===================== EMPLOYEE DASHBOARD ===================== -->
+    <div id="employeePage" class="hidden">
+        <h2>My Profile</h2>
+        <p id="myProfileInfo"></p>
+
+        <h2>Apply for Leave</h2>
+        <form id="applyLeaveForm">
+            <input type="date" id="fromDate" required>
+            <input type="date" id="toDate" required>
+            <button type="submit">Apply</button>
+        </form>
+
+        <h2>My Leave Requests</h2>
+        <button id="loadMyLeavesBtn">Refresh My Leave Status</button>
+        <table id="myLeavesTable">
+            <thead>
+                <tr><th>Leave ID</th><th>From</th><th>To</th><th>Status</th></tr>
+            </thead>
+            <tbody id="myLeavesTableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- ===================== MANAGER DASHBOARD ===================== -->
+    <div id="managerPage" class="hidden">
+        <h2>Pending Leave Requests</h2>
+        <button id="loadPendingBtn">Load Pending Requests</button>
+        <table id="leaveTable">
+            <thead>
+                <tr><th>Leave ID</th><th>Employee ID</th><th>From</th><th>To</th><th>Status</th><th>Action</th></tr>
+            </thead>
+            <tbody id="leaveTableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- ===================== ADMIN DASHBOARD ===================== -->
+    <div id="adminPage" class="hidden">
+        <h2>Employees</h2>
+        <input type="text" id="searchInput" placeholder="Search by name...">
+        <button id="searchBtn">Search</button>
+        <button id="clearSearchBtn">Show All</button>
+        <table id="employeeTable">
+            <thead>
+                <tr><th>ID</th><th>Name</th><th>Email</th><th>Role</th><th>Department</th></tr>
+            </thead>
+            <tbody id="employeeTableBody"></tbody>
+        </table>
+
+        <h2>Add Employee</h2>
+        <form id="addEmployeeForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <select id="role">
+                <option value="EMPLOYEE">Employee</option>
+                <option value="MANAGER">Manager</option>
+                <option value="ADMIN">Admin</option>
+            </select>
+            <button type="submit">Add Employee</button>
+        </form>
+
+        <h2>Manage Departments</h2>
+        <form id="addDepartmentForm">
+            <input type="text" id="deptName" placeholder="Department name" required>
+            <button type="submit">Add Department</button>
+        </form>
+        <ul id="departmentList"></ul>
+
+        <h2>Assign Employee to Department</h2>
+        <form id="assignDeptForm">
+            <select id="assignEmpSelect"></select>
+            <select id="assignDeptSelect"></select>
+            <button type="submit">Assign</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
